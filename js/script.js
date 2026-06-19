@@ -279,10 +279,10 @@ intranet IN A 192.168.3.3`
     "kali-linux": {
       title: "Kali Linux",
       category: "Cybersécurité",
-      role: "Audit offensif & Pentesting",
-      purpose: "Système d'exploitation dédié à la sécurité de l'information et aux tests de pénétration.",
+      role: "Outil d'audit offensif & Pentesting",
+      purpose: "Distribution Linux dédié à la cybersécurité et aux tests de pénétration, préinstallée avec des centaines d'outils offensifs.",
       description: "Kali Linux est la distribution standard de l'industrie pour les audits de sécurité. Elle regroupe des centaines d'outils spécialisés dans la recherche de vulnérabilités, l'analyse réseau, l'exploitation de failles et le reverse engineering.",
-      usage: "Utilisé lors de la SAÉ 3.Cyber04 pour cartographier le réseau (Nmap), intercepter les flux (Wireshark), tester la robustesse des mots de passe (Hydra) et analyser la sécurité applicative.",
+      usage: "Utilisé lors de la SAE3.Cyber04 pour cartographier le réseau (Nmap), intercepter les flux (Wireshark), tester la robustesse des mots de passe (Hydra) et analyser la sécurité applicative.",
       icon: "icons/kali_logo.avif"
     },
     "nmap": {
