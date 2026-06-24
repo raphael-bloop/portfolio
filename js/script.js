@@ -1337,4 +1337,15 @@ intranet IN A 192.168.3.3`
   revealElements.forEach(el => {
     revealObserver.observe(el);
   });
+
+    /* --- 7. RESET FORMULAIRE APRÈS ENVOI --- */
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', () => {
+      setTimeout(() => {
+        form.reset();
+      }, 500);
+    });
+  }
+  
 });
