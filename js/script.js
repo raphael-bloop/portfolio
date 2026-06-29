@@ -1342,15 +1342,35 @@ intranet IN A 192.168.3.3`
    /* --- 8. BACK TO TOP --- */
 const backToTopBtn = document.getElementById('back-to-top');
 if (backToTopBtn) {
+  let isScrollingToTop = false;
+
   window.addEventListener('scroll', () => {
+    if (isScrollingToTop) return; // bloque pendant la remontée
     if (window.scrollY > 400) {
       backToTopBtn.classList.add('visible');
     } else {
       backToTopBtn.classList.remove('visible');
     }
   });
+
   backToTopBtn.addEventListener('click', () => {
+    isScrollingToTop = true;
+    backToTopBtn.classList.remove('visible');
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Détecte la fin du scroll smooth
+    const checkScrollEnd = setInterval(() => {
+      if (window.scrollY === 0) {
+        clearInterval(checkScrollEnd);
+        isScrollingToTop = false;
+      }
+    }, 50);
+
+    // Sécurité : reset le flag après 2s maximum
+    setTimeout(() => {
+      isScrollingToTop = false;
+    }, 2000);
   });
 }
  
